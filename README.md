@@ -3,7 +3,12 @@ BiGCN is an innovative Graph Convolutional Network (GCN)-based approach designed
 ## Dependencies 
 python(v3.7)
 ### python packages
-torch, numpy, xlrd, sklearn
+torch
+
+numpy  
+
+sklearn
+
 ## Data preparation
 BCR embedding: derived from scBCR-seq data by ‘Atchley factors’  and contrastive learning.
 
@@ -12,4 +17,19 @@ PCA of B cells: the PCA representation of gene expression matrix of B cells from
 crudegraph: the graph constructed for BCR clonatypes based on the V/J genes.
 
 ## BiGCN Usage
+### construct B-cell and BCR graphs
+#### Data conversion
+
+data_process.py
+
+input_data.py
+
+#### construct graphs
+graphStructure.py
+
+### integrating B-cell and BCR graphs
+main.py
+
+model.py
+
 
