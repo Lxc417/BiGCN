@@ -26,19 +26,27 @@ then BiGCN takes the following three data files as input:
    The weight of edge in the BCR crude graph is defined as the cosine similarity calculated based on the original BCR embedding. 
 
 ## BiGCN Usage
+BiGCN's code consists of two main parts: graph construction and graph fusion
+
 ### construct B-cell and BCR graphs
 #### Data conversion
+BiGCN first converts BCR embedding and PCA resprentaion into the format of .pt by the following two .py files:
 
 data_process.py
 
 input_data.py
 
 #### construct graphs
-graphStructure.py
+Taking the above .pt files as input, BiGCN constructs the B cell and BCR graph by graphStructure.py, and oupts:
 
-### integrating B-cell and BCR graphs
-main.py
+bcr_cos_100.pt
 
-model.py
+pca_cos_100.pt
+
+### fusing B-cell and BCR graphs
+With the constructed B cell graph (pca_cos_100.pt) and BCR graph (bcr_cos_100.pt), run main.py to obtain the final integrated embedding embedding_cos_100_balance.pt.
+
+The downstream analysis code based on integrated embedding can be implemented according to our manuscript, using your own familiar language, these are common analysis and easy to implement.
+
 
 
