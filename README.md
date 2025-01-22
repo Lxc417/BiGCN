@@ -1,5 +1,7 @@
 # BiGCN
-BiGCN is an innovative Graph Convolutional Network (GCN)-based approach designed to effectively integrate B cell transcriptomes with BCR repertoires. BiGCN converts the integration of B cells and BCRs into a graph fusion problem and produces an explicit integrated latent embedding that encapsulates information from both modalities.
+Regarding the gene expression and BCR-seq as two-view features of B cells and transforming them into one-to-one corresponding graphs, BiGCN is an innovative Graph Convolutional Network (GCN)-based approach designed
+to effectively fuse the two graphs into an explicit integraed embedding. This integrated embedding has improved generalization ability, not only shares information of both gene expression and BCRs but also contains
+potential information hidden in respective data. BiGCN is capable of capturing accurate B cell development trajectory.
 ## Dependencies 
 python(v3.7)
 ### python packages
